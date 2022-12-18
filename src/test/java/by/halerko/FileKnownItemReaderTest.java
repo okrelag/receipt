@@ -25,7 +25,7 @@ class FileKnownItemReaderTest {
     @Test
     void shouldThrowExceptionOnInvalidNumberFormat(){
         FileKnownItemReader fileKnownItemReader = new FileKnownItemReader("products-invalid.txt","cards1.txt");
-        Assertions.assertThrows(NumberFormatException.class, () -> fileKnownItemReader.readKnownItems());
+        Assertions.assertThrows(NumberFormatException.class, fileKnownItemReader::readKnownItems);
     }
     @Test
     void shouldThrowFileNotFoundFormat(){

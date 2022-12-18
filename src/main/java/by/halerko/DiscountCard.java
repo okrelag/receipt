@@ -11,13 +11,9 @@ public class DiscountCard {
         this.id = id;
         this.discount = discount;
     }
-
-
-
     public double getDiscount() {
         return discount;
     }
-
     public int getId() {
         return id;
     }
@@ -29,7 +25,6 @@ public class DiscountCard {
         DiscountCard that = (DiscountCard) o;
         return id == that.id && Double.compare(that.discount, discount) == 0;
     }
-
     @Override
     public String toString() {
         return "DiscountCard{" +
@@ -37,7 +32,6 @@ public class DiscountCard {
                 ", discount=" + discount +
                 '}';
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(id, discount);

@@ -1,23 +1,14 @@
 package by.halerko;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ShoppingCartReader {
 
     private Map<Product, Integer> yourProducts;
     private DiscountCard yourCard;
-
-
-
-    public Map<Product, Integer> getYourProducts() {
-        return yourProducts;
-    }
-
-    public DiscountCard getYourCard() {
-        return yourCard;
-    }
-
-
 
     private Product getProduct(int itemId, KnownItems knownItems) throws InvalidInputException {
         Product ourProduct = null;

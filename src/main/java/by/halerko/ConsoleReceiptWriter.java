@@ -2,7 +2,7 @@ package by.halerko;
 
 import java.time.format.DateTimeFormatter;
 
-public class ConcoleReceiptWriter {
+public class ConsoleReceiptWriter {
 
     public void printCheck(Receipt receipt) {
 

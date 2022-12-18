@@ -9,7 +9,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 class TaskSolverTest {
     private static final String FILE_NAME = "file.txt";
@@ -20,7 +21,7 @@ class TaskSolverTest {
     @Mock
     private ReceiptCalculator receiptCalculator;
     @Mock
-    private ConcoleReceiptWriter concoleReceiptWriter;
+    private ConsoleReceiptWriter concoleReceiptWriter;
     @Mock
     private FileReceiptWriter fileReceiptWriter;
     @Mock
@@ -46,7 +47,7 @@ class TaskSolverTest {
         ShoppingCart shoppingCard = new ShoppingCart(productsMap, new DiscountCard(2, 2.2));
         when(shoppingCartReader.readShoppingCart(args, knowItems)).thenReturn(shoppingCard);
         SuperMarket superMarket = new SuperMarket("myMarket", "12 LindenStrasse", "11-22-445");
-        Receipt receipt = new Receipt("name","addr", "2233", LocalDateTime.now(),null,5.6, 5.6);
+        Receipt receipt = new Receipt("name", "addr", "2233", LocalDateTime.now(), null, 5.6, 5.6);
         when(receiptCalculator.calculate(superMarket, shoppingCard)).thenReturn(receipt);
         TaskSolver taskSolver = new TaskSolver(knownItemsReaderFactory, shoppingCartReader, receiptCalculator, concoleReceiptWriter, fileReceiptWriter, superMarket);
         taskSolver.solveTask(args);

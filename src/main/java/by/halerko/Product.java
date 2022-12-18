@@ -43,18 +43,23 @@ public class Product {
     public int hashCode() {
         return Objects.hash(name, itemId, price, isSale);
     }
+
     public boolean isSale() {
         return isSale;
     }
+
     public double getPrice() {
         return price;
     }
+
     public String getName() {
         return name;
     }
+
     public int getItemId() {
         return itemId;
     }
+
     public static class Builder {
 
         private String name;
@@ -62,7 +67,7 @@ public class Product {
         private double price;
         private boolean isSale = false;
 
-        public static Builder builder(){
+        public static Builder builder() {
             return new Builder();
         }
 
@@ -82,10 +87,6 @@ public class Product {
 
             return new Product(name, itemId, price, isSale);
         }
-
-
-
-
 
 
     }

@@ -5,7 +5,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ReceiptCalculator {
-    private  Clock clock;
+    private Clock clock;
+
     public ReceiptCalculator(Clock clock) {
         this.clock = clock;
     }
@@ -23,7 +24,7 @@ public class ReceiptCalculator {
         double priceSum = receiptItems.stream().mapToDouble(receiptItem -> receiptItem.getTotalPrice()).sum();
         DiscountCard discountCard = shoppingCart.getCard();
         double discount = discountCard != null ? priceSum * discountCard.getDiscount() : 0;
-        double totalPrice =  priceSum - discount;
+        double totalPrice = priceSum - discount;
         return new Receipt(
                 superMarket.getName(),
                 superMarket.getAddress(),

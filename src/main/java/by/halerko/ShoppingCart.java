@@ -15,8 +15,6 @@ public class ShoppingCart {
         return yourProducts;
     }
 
-
-
     public DiscountCard getCard() {
         return yourCard;
     }

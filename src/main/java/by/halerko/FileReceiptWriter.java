@@ -3,13 +3,10 @@ package by.halerko;
 import java.io.*;
 
 public class FileReceiptWriter {
-
-
-
  private  String fileName;
- private ConcoleReceiptWriter concoleReceiptWriter;
+ private ConsoleReceiptWriter concoleReceiptWriter;
 
-    public FileReceiptWriter(String fileName, ConcoleReceiptWriter concoleReceiptWriter) {
+    public FileReceiptWriter(String fileName, ConsoleReceiptWriter concoleReceiptWriter) {
         this.fileName = fileName;
         this.concoleReceiptWriter = concoleReceiptWriter;
     }

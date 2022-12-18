@@ -12,7 +12,7 @@ public class CheckRunner {
         KnownItemsReaderFactory knownItemsReaderFactory = new KnownItemsReaderFactory();
         ShoppingCartReader shoppingCartReader = new ShoppingCartReader();
         ReceiptCalculator receiptCalculator = new ReceiptCalculator(new Clock());
-        ConcoleReceiptWriter concoleReceiptWriter = new ConcoleReceiptWriter();
+        ConsoleReceiptWriter concoleReceiptWriter = new ConsoleReceiptWriter();
         FileReceiptWriter fileReceiptWriter = new FileReceiptWriter(fileName, concoleReceiptWriter);
         TaskSolver taskSolver = new TaskSolver(knownItemsReaderFactory, shoppingCartReader, receiptCalculator, concoleReceiptWriter, fileReceiptWriter, superMarket);
         taskSolver.solveTask(args);

@@ -19,7 +19,7 @@ public class FileKnownItemReader implements KnownItemsReader {
         boolean isSale;
         ArrayList<Product> products = new ArrayList<>();
         InputStream is = getClass().getClassLoader().getResourceAsStream(fileName);
-        if(is ==null){
+        if (is == null) {
             throw new FileNotFoundException();
         }
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
@@ -55,7 +55,7 @@ public class FileKnownItemReader implements KnownItemsReader {
         int id;
         double discount;
         InputStream is = getClass().getClassLoader().getResourceAsStream(fileName);
-        if(is ==null){
+        if (is == null) {
             throw new FileNotFoundException();
         }
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {

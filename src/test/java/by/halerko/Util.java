@@ -21,7 +21,5 @@ public class Util {
         Map<Product, Integer> productsMap = Map.of(Product.Builder.builder().setProduct("apple", 1, 4.5).setIsSale(false).build(), 1);
         ShoppingCart shoppingCard = new ShoppingCart(productsMap, new DiscountCard(1, 0));
         return shoppingCard;
-
     }
-
 }

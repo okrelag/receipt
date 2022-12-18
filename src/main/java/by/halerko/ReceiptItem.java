@@ -3,8 +3,8 @@ package by.halerko;
 import java.util.Objects;
 
 public class ReceiptItem {
-    private  String productName;
-    private  double price;
+    private String productName;
+    private double price;
     private double totalPrice;
     private double discount;
     private int quantity;

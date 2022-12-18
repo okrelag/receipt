@@ -1,17 +1,15 @@
 package by.halerko;
 
-import java.io.FileNotFoundException;
-
 public class TaskSolver {
 
     private KnownItemsReaderFactory knownItemsReaderFactory;
     private ShoppingCartReader shoppingCartReader;
     private ReceiptCalculator receiptCalculator;
-    private ConcoleReceiptWriter concoleReceiptWriter;
+    private ConsoleReceiptWriter concoleReceiptWriter;
     private FileReceiptWriter fileReceiptWriter;
     private SuperMarket superMarket;
 
-    public TaskSolver(KnownItemsReaderFactory knownItemsReaderFactory, ShoppingCartReader shoppingCartReader, ReceiptCalculator receiptCalculator, ConcoleReceiptWriter concoleReceiptWriter, FileReceiptWriter fileReceiptWriter, SuperMarket superMarket) {
+    public TaskSolver(KnownItemsReaderFactory knownItemsReaderFactory, ShoppingCartReader shoppingCartReader, ReceiptCalculator receiptCalculator, ConsoleReceiptWriter concoleReceiptWriter, FileReceiptWriter fileReceiptWriter, SuperMarket superMarket) {
         this.knownItemsReaderFactory = knownItemsReaderFactory;
         this.shoppingCartReader = shoppingCartReader;
         this.receiptCalculator = receiptCalculator;

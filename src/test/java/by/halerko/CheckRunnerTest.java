@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class CheckRunnerTest {
     @Test
-    void testCheckRunner(){
+    void testCheckRunner() {
         CheckRunner.main(new String[]{"1-1"});
 
     }
